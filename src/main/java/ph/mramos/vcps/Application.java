@@ -3,7 +3,9 @@ package ph.mramos.vcps;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication
+@SpringBootApplication // Default entity scanning starts where the @EnableAutoConfiguration / @SpringBootApplication is located.
+// @EntityScan // Can be specified in a different class to that scanning starts there.
+// @EnableJpaRepositories // No need to define this since all repositories will be auto detected from @SpringBootApplication.
 public class Application {
 
 	public static void main(String[] args) {

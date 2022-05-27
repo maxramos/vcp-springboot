@@ -1,0 +1,1 @@
+INSERT INTO person (first_name, last_name, age, birth_date, weight, height) VALUES ('max', 'ramos', 33, '1988-05-11', 103.1, 180.34);

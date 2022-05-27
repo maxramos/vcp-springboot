@@ -5,8 +5,39 @@
 <title>Person</title>
 </head>
 <body>
-ID: <span th:text="${id}"></span>
-<br />
 Java Version: <span th:text="${javaVersion}"></span>
+<br />
+<table border="1">
+	<tbody>
+		<tr>
+			<td>id</td>
+			<td><span th:text="${person.id}"></span></td>
+		</tr>
+		<tr>
+			<td>firstName</td>
+			<td><span th:text="${person.firstName}"></span></td>
+		</tr>
+		<tr>
+			<td>lastName</td>
+			<td><span th:text="${person.lastName}"></span></td>
+		</tr>
+		<tr>
+			<td>age</td>
+			<td><span th:text="${person.age}"></span></td>
+		</tr>
+		<tr>
+			<td>birthDate</td>
+			<td><span th:text="${person.birthDate}"></span></td>
+		</tr>
+		<tr>
+			<td>weight</td>
+			<td><span th:text="${person.weight}"></span></td>
+		</tr>
+		<tr>
+			<td>height</td>
+			<td><span th:text="${person.height}"></span></td>
+		</tr>
+	</tbody>
+</table>
 </body>
 </html>
