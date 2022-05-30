@@ -40,7 +40,8 @@ public class MultiWebSecurityConfig { // Extending WebSecurityConfigurerAdapter 
 					.anyRequest().hasRole("admin")
 					.and()
 				.formLogin().and()
-//				.httpBasic().and();
+				.httpBasic().and()
+				.csrf().disable() // Must be added to that POST requests for actuators (e.g. setting a specific log level) are processed.
 				.requiresChannel()
 					.anyRequest().requiresSecure()
 					.and()
