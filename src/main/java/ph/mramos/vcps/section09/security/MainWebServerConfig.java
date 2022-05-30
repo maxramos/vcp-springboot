@@ -7,14 +7,14 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-public class TomcatWebServerConfig {
+public class MainWebServerConfig {
 
 	@Bean
 	public WebServerFactoryCustomizer<TomcatServletWebServerFactory> httpConnectorCustomizer() {
 		Connector connector = new Connector(TomcatServletWebServerFactory.DEFAULT_PROTOCOL);
 		connector.setPort(8080);
 
-		return tomcat -> tomcat.addAdditionalTomcatConnectors(connector);
+		return factory -> factory.addAdditionalTomcatConnectors(connector);
 	}
 
 }

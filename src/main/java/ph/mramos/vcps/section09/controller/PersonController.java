@@ -15,7 +15,7 @@ import ph.mramos.vcps.section09.webmvc.service.PersonService;
 @RequestMapping("/person")
 public class PersonController {
 
-	@Value("${app.java.version}")
+	@Value("${info.app.java.version}")
 	private String javaVersion;
 
 	@Autowired
