@@ -24,6 +24,7 @@ public class LoggerAspect {
 	@Before("services()")
 	public void beforeLog(JoinPoint jp) {
 		System.out.println("BEFORE");
+		System.out.println("Kind: " + jp.getKind());
 		System.out.println("Signature: " + jp.getSignature().toLongString());
 		System.out.println("Params: " + Arrays.toString(jp.getArgs()));
 		System.out.println();
@@ -32,6 +33,7 @@ public class LoggerAspect {
 	@AfterReturning(pointcut = "services()", returning = "returnVal")
 	public void afterReturningLog(JoinPoint jp, Object returnVal) {
 		System.out.println("AFTER RETURNING");
+		System.out.println("Kind: " + jp.getKind());
 		System.out.println("Signature: " + jp.getSignature().toLongString());
 		System.out.println("Params: " + Arrays.toString(jp.getArgs()));
 		System.out.println("Return Value: " + returnVal);
@@ -41,6 +43,7 @@ public class LoggerAspect {
 	@AfterThrowing(pointcut = "services()", throwing = "throwable")
 	public void afterThrowingLog(JoinPoint jp, Throwable throwable) {
 		System.out.println("AFTER THROWING");
+		System.out.println("Kind: " + jp.getKind());
 		System.out.println("Signature: " + jp.getSignature().toLongString());
 		System.out.println("Params: " + Arrays.toString(jp.getArgs()));
 		System.out.println("Throwable: " + throwable.getClass());
@@ -50,6 +53,7 @@ public class LoggerAspect {
 	@After("services()")
 	public void afterLog(JoinPoint jp) {
 		System.out.println("AFTER");
+		System.out.println("Kind: " + jp.getKind());
 		System.out.println("Signature: " + jp.getSignature().toLongString());
 		System.out.println("Params: " + Arrays.toString(jp.getArgs()));
 		System.out.println();
@@ -58,6 +62,7 @@ public class LoggerAspect {
 	@Around("services()")
 	public Object aroundLog(ProceedingJoinPoint jp) {
 		System.out.println("AROUND");
+		System.out.println("Kind: " + jp.getKind());
 		System.out.println("Signature: " + jp.getSignature().toLongString());
 		System.out.println("Params: " + Arrays.toString(jp.getArgs()));
 		System.out.println();
