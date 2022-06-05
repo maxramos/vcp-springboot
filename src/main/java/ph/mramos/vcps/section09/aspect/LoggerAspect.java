@@ -17,6 +17,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class LoggerAspect {
 
+//	@Pointcut("execution(public ph.mramos.vcps.section09.entity.Person ph.mra*.vcps..*Service.find*(..))")
 	@Pointcut("execution(* ph.mramos.vcps.section09.service.*Service.*(..))")
 	private void services() {}
 
