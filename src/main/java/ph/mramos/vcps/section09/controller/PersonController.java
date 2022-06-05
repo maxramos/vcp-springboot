@@ -26,7 +26,7 @@ public class PersonController {
 	public String find(@PathVariable int id, Model model) {
 		System.out.println(SecurityContextHolder.getContext().getAuthentication().getPrincipal());
 		Person person = personService.findById(id);
-		model.addAttribute("person", person);
+		model.addAttribute("person", person == null ? new Person() : person);
 		model.addAttribute("javaVersion", javaVersion);
 		System.out.println(person);
 		return "person";
