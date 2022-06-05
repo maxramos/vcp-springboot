@@ -18,7 +18,7 @@ public class PersonService {
 	@Autowired
 	private PersonRepository personRepository;
 
-	public Person findById(int id) {
+	public Person findById(int id) throws PersonIdNotFoundException {
 //		Person person = personRepository.getById(id); // causes "Hibernate could not initialize proxy – no Session" if fields are not all fetch before the transaction ends.
 //		System.out.println(person);
 		Optional<Person> result = personRepository.findById(id);
