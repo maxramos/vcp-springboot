@@ -1,4 +1,4 @@
-package ph.mramos.vcps;
+package ph.mramos.vcps.section09;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

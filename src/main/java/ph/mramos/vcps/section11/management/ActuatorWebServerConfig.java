@@ -1,4 +1,4 @@
-package ph.mramos.management;
+package ph.mramos.vcps.section11.management;
 
 import org.apache.catalina.connector.Connector;
 import org.springframework.boot.actuate.autoconfigure.web.ManagementContextConfiguration;
