@@ -13,6 +13,14 @@ import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.stereotype.Component;
 
+/**
+ * Order of execution:
+ * 1. @Around before proceed
+ * 2. @Before
+ * 3. @AfterReturning or @AfterThrowing
+ * 5. @After
+ * 6. @Around after proceed
+ */
 @Aspect
 @Component
 public class LoggerAspect {
