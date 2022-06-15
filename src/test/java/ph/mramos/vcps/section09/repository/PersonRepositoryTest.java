@@ -36,7 +36,7 @@ public class PersonRepositoryTest {
 
 	@Test
 	public void test_findByName() {
-		Person person = new Person(" therese", "ramos", 35, Date.from(LocalDate.of(1986, 12, 25).atStartOfDay().toInstant(ZoneOffset.UTC)), 62, 157.48);
+		Person person = new Person(" therese", "ramos", 35, Date.from(LocalDate.of(1986, 12, 25).atStartOfDay().toInstant(ZoneOffset.UTC)), 62.0, 157.48);
 		em.persist(person);
 
 		List<Person> persons = personRepository.findFirst2ByLastNameIgnoreCaseOrderByFirstNameDesc("ramos");

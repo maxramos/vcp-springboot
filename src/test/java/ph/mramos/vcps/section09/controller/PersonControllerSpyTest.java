@@ -42,7 +42,7 @@ public class PersonControllerSpyTest {
 	@Test
 	@WithMockUser // Can be annotated on the class.
 	public void testStub_find() throws Exception {
-		Person person = new Person("nikki1", "tan1", 35, Date.from(LocalDate.of(1986, 12, 25).atStartOfDay().toInstant(ZoneOffset.UTC)), 62, 157.48);
+		Person person = new Person("nikki1", "tan1", 35, Date.from(LocalDate.of(1986, 12, 25).atStartOfDay().toInstant(ZoneOffset.UTC)), 62.0, 157.48);
 		given(personService.findById(1)).willReturn(person);
 
 		mockMvc.perform(MockMvcRequestBuilders.get("/person/{id}", 1).accept(MediaType.APPLICATION_FORM_URLENCODED).secure(true))

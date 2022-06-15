@@ -1,1 +1,3 @@
 INSERT INTO person (first_name, last_name, age, birth_date, weight, height) VALUES ('max', 'ramos', 33, '1988-05-11', 103.1, 180.34);
+INSERT INTO person (first_name, last_name, age, birth_date, weight, height) VALUES ('therese', 'ramos', 35, '1986-12-25', 62.0, 157.48);
+INSERT INTO person (first_name, last_name, age, birth_date, weight, height) VALUES ('marx', 'ramos', 3, '2019-01-11', 14.0, 91.44);

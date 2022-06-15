@@ -15,7 +15,7 @@ public class Person {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id;
+	private Integer id;
 
 	@Column
 	private String firstName;
@@ -29,15 +29,15 @@ public class Person {
 	@Column
 	private Date birthDate;
 
-	private double weight;
+	private Double weight;
 
-	private double height;
+	private Double height;
 
 	public Person() {
 		super();
 	}
 
-	public Person(String firstName, String lastName, int age, Date birthDate, double weight, double height) {
+	public Person(String firstName, String lastName, Integer age, Date birthDate, Double weight, Double height) {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.age = age;
@@ -46,11 +46,11 @@ public class Person {
 		this.height = height;
 	}
 
-	public int getId() {
+	public Integer getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 
@@ -70,11 +70,11 @@ public class Person {
 		this.lastName = lastName;
 	}
 
-	public int getAge() {
+	public Integer getAge() {
 		return age;
 	}
 
-	public void setAge(int age) {
+	public void setAge(Integer age) {
 		this.age = age;
 	}
 
@@ -86,19 +86,19 @@ public class Person {
 		this.birthDate = birthDate;
 	}
 
-	public double getWeight() {
+	public Double getWeight() {
 		return weight;
 	}
 
-	public void setWeight(double weight) {
+	public void setWeight(Double weight) {
 		this.weight = weight;
 	}
 
-	public double getHeight() {
+	public Double getHeight() {
 		return height;
 	}
 
-	public void setHeight(double height) {
+	public void setHeight(Double height) {
 		this.height = height;
 	}
 
