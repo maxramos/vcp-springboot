@@ -19,7 +19,7 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 import ph.mramos.vcps.section09.entity.Person;
 import ph.mramos.vcps.section09.service.PersonService;
 
-@WebMvcTest(PersonController.class)
+@WebMvcTest(PersonController.class) // 'controllers' attribute can be left blank then only @Controller, @ControllerAdvice, and WebMvcConfigurer will be loaded from where @SpringBootApplication is located (including sub packages).
 public class PersonControllerMockTest {
 
 	@Autowired
