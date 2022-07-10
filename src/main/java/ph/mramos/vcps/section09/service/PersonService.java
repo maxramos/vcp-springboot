@@ -42,4 +42,8 @@ public class PersonService {
 		throw new RuntimeException("Person not found.");
 	}
 
+	public void run() {
+		System.out.println("PersonService#run");
+	}
+
 }
